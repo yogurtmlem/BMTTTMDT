@@ -21,3 +21,38 @@
 2026/05/17 11:14:25 [error] 29#29: *6 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/search.html?q=tai"
 2026/05/17 11:28:49 [error] 29#29: *10 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/index.html"
 2026/05/17 12:02:50 [error] 29#29: *13 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.18.0.1, server: , request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/index.php"
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Sun May 17 14:45:29.108681 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Sun May 17 14:45:29.109328 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun May 17 14:47:32.000017 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Sun May 17 14:47:39.295203 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Sun May 17 14:47:39.313897 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun May 17 14:49:05.634004 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Sun May 17 14:49:07.405734 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Sun May 17 14:49:07.406226 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun May 17 14:49:12.780383 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:38458] DB Error: could not find driver
+[Sun May 17 14:49:13.723274 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:38458] DB Error: could not find driver
+[Sun May 17 14:50:10.762703 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Sun May 17 14:51:15.986807 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Sun May 17 14:51:15.987327 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun May 17 14:52:59.472305 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Sun May 17 14:53:22.723014 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Sun May 17 14:53:22.724480 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun May 17 14:57:21.789624 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Sun May 17 14:58:04.215438 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Sun May 17 14:58:04.215913 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun May 17 15:01:29.857860 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Sun May 17 15:01:40.120543 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Sun May 17 15:01:40.121116 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Sun May 17 15:01:50.392773 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:50548] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Sun May 17 15:01:51.200845 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:50548] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Sun May 17 15:01:51.823025 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:50548] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Sun May 17 15:17:26.037180 2026] [php:error] [pid 18:tid 18] [client 172.18.0.1:53440] script '/var/www/html/config.php' not found or unable to stat
+[Sun May 17 15:17:26.126549 2026] [php:error] [pid 18:tid 18] [client 172.18.0.1:53440] script '/var/www/html/wp-login.php' not found or unable to stat
+[Sun May 17 15:17:26.136283 2026] [php:error] [pid 18:tid 18] [client 172.18.0.1:53440] script '/var/www/html/shell.php' not found or unable to stat

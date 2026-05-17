@@ -1,7 +1,7 @@
 services:
 
   webshop:
-    image: php:8.2-apache
+    build: .
     ports:
       - "80:80"
     volumes:

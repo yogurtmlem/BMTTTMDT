@@ -1,7 +1,4 @@
-Now create the cart handler:
-powershellNew-Item webshop-html\cart.php
-Click on cart.php and paste this in:
-php<?php
+<?php
 session_start();
 require 'db.php';
 
@@ -25,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $pdo->prepare("INSERT INTO cart (session_id, product_id, quantity) VALUES (?, ?, 1)")
                 ->execute([$session_id, $product_id]);
         }
-        echo json_encode(['success' => true]);
+        header('Location: cart.php');
         exit;
     }
     
@@ -33,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $product_id = $_POST['product_id'] ?? 0;
         $pdo->prepare("DELETE FROM cart WHERE session_id = ? AND product_id = ?")
             ->execute([$session_id, $product_id]);
-        echo json_encode(['success' => true]);
+        header('Location: cart.php');
         exit;
     }
 

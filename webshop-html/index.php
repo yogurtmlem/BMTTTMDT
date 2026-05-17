@@ -1,16 +1,16 @@
-Now let's create the main PHP pages. First, index.php:
-powershellNew-Item webshop-html\index.php
-Click on index.php and paste this in:
-php<?php
+<?php
 session_start();
 require 'db.php';
-
-$stmt = $pdo->query("SELECT * FROM products LIMIT 6");
-$products = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-$cart_stmt = $pdo->prepare("SELECT SUM(quantity) FROM cart WHERE session_id = ?");
-$cart_stmt->execute([session_id()]);
-$cart_count = $cart_stmt->fetchColumn() ?? 0;
+if ($pdo) {
+    $stmt = $pdo->query("SELECT * FROM products LIMIT 6");
+    $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $cart_stmt = $pdo->prepare("SELECT SUM(quantity) FROM cart WHERE session_id = ?");
+    $cart_stmt->execute([session_id()]);
+    $cart_count = $cart_stmt->fetchColumn() ?? 0;
+} else {
+    $products = [];
+    $cart_count = 0;
+}
 ?>
 <!DOCTYPE html>
 <html lang="vi">

@@ -1,4 +1,9 @@
+SET NAMES utf8mb4;
+SET CHARACTER SET utf8mb4;
+
 USE shopdb;
+
+ALTER DATABASE shopdb CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,

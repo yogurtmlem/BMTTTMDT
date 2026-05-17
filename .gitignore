@@ -1,0 +1,13 @@
+# Logs
+nginx/logs/*
+!nginx/logs/.gitkeep
+
+# Environment
+.env
+
+# Docker volumes
+mysql/data/
+
+# OS files
+.DS_Store
+Thumbs.db
