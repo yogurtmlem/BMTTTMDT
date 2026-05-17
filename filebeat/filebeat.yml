@@ -1,0 +1,19 @@
+filebeat.inputs:
+  - type: log
+    enabled: true
+    paths:
+      - /var/log/apache2/access.log
+    fields:
+      log_type: nginx_access
+    fields_under_root: true
+
+  - type: log
+    enabled: true
+    paths:
+      - /var/log/apache2/error.log
+    fields:
+      log_type: nginx_error
+    fields_under_root: true
+
+output.logstash:
+  hosts: ["logstash:5044"]
