@@ -1,20 +1,34 @@
 <?php
 session_start();
-require 'db.php';
+require __DIR__ . '/db.php';
 
 $session_id = session_id();
 
-// Add to cart
+$productImages = [
+    'Giày thể thao Urban' => 'shoes.jpg',
+    'Túi xách da thật' => 'bag.jpg',
+    'Đồng hồ thông minh' => 'watch.jpg',
+    'Tai nghe không dây' => 'headphones.jpg',
+    'Ốp lưng điện thoại' => 'case.jpg',
+    'Bàn phím cơ gaming' => 'gaming.jpg',
+    'Kính mắt thời trang' => 'sunglasses.jpg',
+    'Balo laptop cao cấp' => 'balo.jpg',
+    'Chuột không dây' => 'mouse.jpg',
+    'Mũ lưỡi trai' => 'hat.jpg',
+    'Đèn LED thông minh' => 'light.jpg',
+    'Pin dự phòng 20000mAh' => 'battery.jpg'
+];
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $action = $_POST['action'] ?? '';
-    
+
     if ($action === 'add') {
         $product_id = $_POST['product_id'] ?? 0;
-        
+
         $stmt = $pdo->prepare("SELECT * FROM cart WHERE session_id = ? AND product_id = ?");
         $stmt->execute([$session_id, $product_id]);
         $existing = $stmt->fetch();
-        
+
         if ($existing) {
             $pdo->prepare("UPDATE cart SET quantity = quantity + 1 WHERE session_id = ? AND product_id = ?")
                 ->execute([$session_id, $product_id]);
@@ -22,122 +36,220 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $pdo->prepare("INSERT INTO cart (session_id, product_id, quantity) VALUES (?, ?, 1)")
                 ->execute([$session_id, $product_id]);
         }
+
         header('Location: cart.php');
         exit;
     }
-    
+
     if ($action === 'remove') {
         $product_id = $_POST['product_id'] ?? 0;
+
         $pdo->prepare("DELETE FROM cart WHERE session_id = ? AND product_id = ?")
             ->execute([$session_id, $product_id]);
+
         header('Location: cart.php');
         exit;
     }
 
     if ($action === 'checkout') {
         $stmt = $pdo->prepare("
-            SELECT c.quantity, p.price 
-            FROM cart c JOIN products p ON c.product_id = p.id 
+            SELECT c.quantity, p.price
+            FROM cart c
+            JOIN products p ON c.product_id = p.id
             WHERE c.session_id = ?
         ");
         $stmt->execute([$session_id]);
-        $items = $stmt->fetchAll();
-        $total = array_sum(array_map(fn($i) => $i['price'] * $i['quantity'], $items));
-        
+        $checkout_items = $stmt->fetchAll();
+
+        $checkout_total = array_sum(array_map(
+            fn($i) => $i['price'] * $i['quantity'],
+            $checkout_items
+        ));
+
         $pdo->prepare("INSERT INTO orders (session_id, total) VALUES (?, ?)")
-            ->execute([$session_id, $total]);
-        $pdo->prepare("DELETE FROM cart WHERE session_id = ?")->execute([$session_id]);
-        
+            ->execute([$session_id, $checkout_total]);
+
+        $pdo->prepare("DELETE FROM cart WHERE session_id = ?")
+            ->execute([$session_id]);
+
         header('Location: checkout.php?success=1');
         exit;
     }
 }
 
-// Get cart items
 $stmt = $pdo->prepare("
-    SELECT c.id, c.quantity, p.id as product_id, p.name, p.price, p.emoji
-    FROM cart c JOIN products p ON c.product_id = p.id
+    SELECT c.id, c.quantity, p.id AS product_id, p.name, p.price, p.emoji
+    FROM cart c
+    JOIN products p ON c.product_id = p.id
     WHERE c.session_id = ?
 ");
 $stmt->execute([$session_id]);
 $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
-$total = array_sum(array_map(fn($i) => $i['price'] * $i['quantity'], $items));
+
+$total = array_sum(array_map(
+    fn($i) => $i['price'] * $i['quantity'],
+    $items
+));
+
+$cart_count = array_sum(array_map(
+    fn($i) => $i['quantity'],
+    $items
+));
 ?>
+
 <!DOCTYPE html>
 <html lang="vi">
 <head>
 <meta charset="UTF-8"/>
-<title>Giỏ hàng - ShopVN</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Giỏ hàng - ShopVN Re-commerce</title>
 <link rel="stylesheet" href="style.css"/>
 </head>
+
 <body>
+
 <nav>
   <div class="logo">Shop<span>VN</span></div>
+
   <div class="nav-links">
     <a href="index.php">Trang chủ</a>
     <a href="products.php">Sản phẩm</a>
     <a href="search.php">Tìm kiếm</a>
+
     <?php if (isset($_SESSION['user'])): ?>
-      <span style="color:#1D9E75;font-size:14px">👤 <?= $_SESSION['user'] ?></span>
+      <span class="user-badge">👤 <?= htmlspecialchars($_SESSION['user']) ?></span>
       <a href="logout.php">Đăng xuất</a>
     <?php else: ?>
       <a href="login.php">Đăng nhập</a>
     <?php endif; ?>
-    <button class="cart-btn">🛒 Giỏ hàng (<?= count($items) ?>)</button>
+
+    <a href="cart.php">
+      <button class="cart-btn">🛒 Giỏ hàng (<?= $cart_count ?>)</button>
+    </a>
   </div>
 </nav>
 
-<div class="section">
-  <div class="section-title">Giỏ hàng của bạn</div>
-  
+<main class="cart-page">
+
+  <div class="section-header cart-header">
+    <div>
+      <p>Giỏ hàng ShopVN</p>
+      <h2>Kiểm tra đơn hàng</h2>
+    </div>
+
+    <a href="products.php">Tiếp tục mua sắm →</a>
+  </div>
+
   <?php if (empty($items)): ?>
-    <div style="text-align:center;padding:3rem;color:#888">
-      <p style="font-size:48px">🛒</p>
-      <p>Giỏ hàng trống</p>
-      <a href="products.php" style="color:#1D9E75">Tiếp tục mua sắm →</a>
-    </div>
+
+    <section class="empty-state cart-empty">
+      <h3>Giỏ hàng của bạn đang trống</h3>
+      <p>Khám phá các sản phẩm đã kiểm định và thêm món phù hợp vào giỏ hàng.</p>
+      <a href="products.php">Xem sản phẩm →</a>
+    </section>
+
   <?php else: ?>
-    <div style="max-width:700px;margin:0 auto">
-      <?php foreach ($items as $item): ?>
-      <div style="background:#fff;border:1px solid #e0e0e0;border-radius:12px;padding:1rem;margin-bottom:1rem;display:flex;align-items:center;gap:1rem">
-        <div style="font-size:36px"><?= $item['emoji'] ?></div>
-        <div style="flex:1">
-          <div style="font-weight:bold"><?= $item['name'] ?></div>
-          <div style="color:#1D9E75"><?= number_format($item['price']) ?>₫</div>
-        </div>
-        <div style="display:flex;align-items:center;gap:0.5rem">
-          <span>Số lượng: <?= $item['quantity'] ?></span>
-          <form method="POST" style="display:inline">
-            <input type="hidden" name="action" value="remove"/>
-            <input type="hidden" name="product_id" value="<?= $item['product_id'] ?>"/>
-            <button type="submit" style="background:#fee;border:1px solid #fcc;border-radius:6px;padding:4px 8px;cursor:pointer;color:#c00">Xóa</button>
-          </form>
-        </div>
-        <div style="font-weight:bold;min-width:100px;text-align:right"><?= number_format($item['price'] * $item['quantity']) ?>₫</div>
+
+    <section class="cart-layout">
+
+      <div class="cart-items">
+
+        <?php foreach ($items as $item): ?>
+
+          <?php
+            $img = $productImages[$item['name']] ?? 'battery.jpg';
+            $line_total = $item['price'] * $item['quantity'];
+          ?>
+
+          <div class="cart-item">
+
+            <div class="cart-item-img">
+              <img
+                src="assets/images/<?= $img ?>"
+                alt="<?= htmlspecialchars($item['name']) ?>"
+                loading="lazy"
+              >
+            </div>
+
+            <div class="cart-item-info">
+              <h3><?= htmlspecialchars($item['name']) ?></h3>
+              <p>Đã kiểm định · Mô tả tình trạng rõ ràng</p>
+              <span><?= number_format($item['price']) ?>₫ / sản phẩm</span>
+            </div>
+
+            <div class="cart-item-qty">
+              <span>Số lượng</span>
+              <strong><?= htmlspecialchars($item['quantity']) ?></strong>
+            </div>
+
+            <div class="cart-item-total">
+              <?= number_format($line_total) ?>₫
+            </div>
+
+            <form method="POST" class="cart-remove-form">
+              <input type="hidden" name="action" value="remove"/>
+              <input type="hidden" name="product_id" value="<?= htmlspecialchars($item['product_id']) ?>"/>
+              <button type="submit">Xóa</button>
+            </form>
+
+          </div>
+
+        <?php endforeach; ?>
+
       </div>
-      <?php endforeach; ?>
-      
-      <div style="background:#f0faf6;border:1px solid #9FE1CB;border-radius:12px;padding:1.5rem;margin-top:1rem">
-        <div style="display:flex;justify-content:space-between;font-size:18px;font-weight:bold">
-          <span>Tổng cộng:</span>
-          <span style="color:#1D9E75"><?= number_format($total) ?>₫</span>
+
+      <aside class="cart-summary">
+
+        <h3>Tóm tắt đơn hàng</h3>
+
+        <div class="summary-row">
+          <span>Tạm tính</span>
+          <strong><?= number_format($total) ?>₫</strong>
         </div>
-        <form method="POST" style="margin-top:1rem">
+
+        <div class="summary-row">
+          <span>Phí vận chuyển</span>
+          <strong>Miễn phí</strong>
+        </div>
+
+        <div class="summary-row">
+          <span>Kiểm định sản phẩm</span>
+          <strong>Đã bao gồm</strong>
+        </div>
+
+        <div class="summary-total">
+          <span>Tổng cộng</span>
+          <strong><?= number_format($total) ?>₫</strong>
+        </div>
+
+        <form method="POST">
           <input type="hidden" name="action" value="checkout"/>
-          <button type="submit" class="hero-btn" style="width:100%">Đặt hàng ngay</button>
+          <button type="submit" class="checkout-btn">
+            Xác nhận đặt hàng
+          </button>
         </form>
-      </div>
-    </div>
+
+        <p class="summary-note">
+          Đơn hàng sẽ được kiểm tra lần cuối trước khi đóng gói và giao đến bạn.
+        </p>
+
+      </aside>
+
+    </section>
+
   <?php endif; ?>
-</div>
+
+</main>
 
 <footer>
-  <p>© 2026 ShopVN. All rights reserved.</p>
+  <p>© 2026 ShopVN Re-commerce. Nền tảng mua sắm bền vững.</p>
+
   <div class="footer-links">
-    <a href="#">Chính sách</a>
-    <a href="#">Liên hệ</a>
-    <a href="#">Hỗ trợ</a>
+    <a href="#">Quy trình kiểm định</a>
+    <a href="#">Chính sách đổi trả</a>
+    <a href="#">Hỗ trợ khách hàng</a>
   </div>
 </footer>
+
 </body>
 </html>
