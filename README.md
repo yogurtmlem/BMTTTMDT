@@ -10,7 +10,7 @@ Hệ thống giám sát an ninh mạng (mini-SIEM) cho website TMĐT mô phỏng
 
 ### 1. Clone repo
 ```bash
-git clone <repo-url>
+git clone https://github.com/yogurtmlem/BMTTTMDT.git
 cd mini-siem
 ```
 

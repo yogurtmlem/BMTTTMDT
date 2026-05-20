@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute([$username]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($user && $password === $user['password']) {
+if ($user && password_verify($password, $user['password'])) {
         $_SESSION['user'] = $user['username'];
         $_SESSION['user_id'] = $user['id'];
         header('Location: index.php');
@@ -97,7 +97,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <div class="login-footer">
-      Chưa có tài khoản? <a href="#">Đăng ký sau khi demo</a>
+      Chưa có tài khoản? <a href="register.php">Đăng ký ngay</a>
     </div>
 
   </section>
