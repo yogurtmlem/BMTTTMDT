@@ -22,7 +22,10 @@ session_start();
 
     <?php if (isset($_SESSION['user'])): ?>
       <span class="user-badge">👤 <?= htmlspecialchars($_SESSION['user']) ?></span>
-      <a href="logout.php">Đăng xuất</a>
+      <?php if ($_SESSION['user'] === 'admin'): ?>
+      <a href="admin/">Admin</a>
+    <?php endif; ?>
+    <a href="logout.php">Đăng xuất</a>
     <?php else: ?>
       <a href="login.php">Đăng nhập</a>
     <?php endif; ?>
