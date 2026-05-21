@@ -4,12 +4,13 @@ services:
     build: .
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - ./webshop-html:/var/www/html
       - ./nginx/logs:/var/log/apache2
     depends_on:
       - mysql
-
+      
   mysql:
     image: mysql:8
     environment:

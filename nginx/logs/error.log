@@ -82,3 +82,17 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
 [Thu May 21 07:03:46.282158 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
 [Thu May 21 07:03:46.282566 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu May 21 09:11:19.348082 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Thu May 21 09:11:21.517229 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Thu May 21 09:11:21.517615 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu May 21 09:11:28.577281 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Thu May 21 09:13:47.001007 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Thu May 21 09:13:47.001570 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu May 21 09:14:46.420629 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00171: Graceful restart requested, doing restart
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Thu May 21 09:14:46.473720 2026] [ssl:warn] [pid 1:tid 1] AH01906: 172.18.0.6:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Thu May 21 09:14:46.474380 2026] [ssl:warn] [pid 1:tid 1] AH01909: 172.18.0.6:443:0 server certificate does NOT include an ID which matches the server name
+[Thu May 21 09:14:46.475998 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 OpenSSL/3.5.5 configured -- resuming normal operations
+[Thu May 21 09:14:46.476269 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
