@@ -11,3 +11,7 @@ mysql/data/
 # OS files
 .DS_Store
 Thumbs.db
+
+# SSL certificates
+*.key
+*.crt

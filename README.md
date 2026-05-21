@@ -20,30 +20,67 @@ docker compose up -d --build
 ```
 Lần đầu mất 5-10 phút để tải images.
 
-### 3. Truy cập
+### 3. Cấu hình SSL/TLS HTTPS 
+
+Chạy lệnh sau để tạo SSL certificate bên trong container webshop:
+
+```bash
+docker exec -i mini-siem-webshop-1 bash -c "
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 \
+-keyout /etc/ssl/private/shopvn.key \
+-out /etc/ssl/certs/shopvn.crt \
+-subj '/CN=localhost/O=ShopVN/C=VN'
+"
+```
+
+Tiếp theo, cấu hình và reload Apache:
+
+```bash
+docker exec -i mini-siem-webshop-1 bash -c "
+a2enmod ssl && \
+printf '<VirtualHost _default_:443>\n\
+  DocumentRoot /var/www/html\n\
+  SSLEngine on\n\
+  SSLCertificateFile /etc/ssl/certs/shopvn.crt\n\
+  SSLCertificateKeyFile /etc/ssl/private/shopvn.key\n\
+  <Directory /var/www/html>\n\
+    AllowOverride All\n\
+    Require all granted\n\
+  </Directory>\n\
+</VirtualHost>\n' > /etc/apache2/sites-available/ssl.conf && \
+a2ensite ssl && \
+service apache2 reload
+"
+```
+> Certificate và private key không được push lên GitHub vì lý do bảo mật. Mỗi collaborator cần tự generate certificate trên máy local.
+
+### 4. Truy cập
 | Service | URL | Mô tả |
 |---------|-----|-------|
-| ShopVN Website | http://localhost | Website TMĐT mô phỏng |
+| ShopVN Website (HTTP) | http://localhost | Website TMĐT mô phỏng |
+| ShopVN Website (HTTPS) | https://localhost | Website với SSL/TLS mã hóa |
 | Admin Panel | http://localhost/admin | Quản trị đơn hàng, người dùng |
 | Kibana Dashboard | http://localhost:5601 | Dashboard giám sát |
 | Elasticsearch | http://localhost:9200 | Kiểm tra dữ liệu log |
 
-### 4. Tài khoản mặc định
+> Khi truy cập HTTPS, trình duyệt sẽ hiển thị cảnh báo bảo mật do hệ thống sử dụng self-signed certificate trong môi trường lab. Chọn **Advanced → Proceed to localhost** để tiếp tục.
+
+### 5. Tài khoản mặc định
 | Tài khoản | Username | Password |
 |-----------|----------|----------|
 | Admin shop | `admin` | `admin123` |
 | Người dùng | `nguyenvana` | `password123` |
 
-### 5. Import Kibana Dashboard
+### 6. Import Kibana Dashboard
 1. Vào http://localhost:5601
 2. Menu → Stack Management → Saved Objects
 3. Click **Import** → chọn file `export.ndjson`
 4. Vào Dashboards → mở **Mini-SIEM - ShopVN Monitor**
 
-### 6. Tạo dữ liệu log
+### 7. Tạo dữ liệu log
 Truy cập các trang của shop, đăng nhập, thêm sản phẩm vào giỏ, đặt hàng...
 
-### 7. Mô phỏng tấn công (PowerShell)
+### 8. Mô phỏng tấn công (PowerShell)
 
 **Brute force login:**
 ```powershell
@@ -79,7 +116,7 @@ for ($i=1; $i -le 500; $i++) {
 }
 ```
 
-### 8. Kiểm tra Fail2Ban
+### 9. Kiểm tra Fail2Ban
 ```powershell
 # Xem trạng thái jail
 docker exec mini-siem-fail2ban-1 fail2ban-client status apache-auth
@@ -88,7 +125,7 @@ docker exec mini-siem-fail2ban-1 fail2ban-client status apache-auth
 docker exec mini-siem-fail2ban-1 fail2ban-client unban --all
 ```
 
-### 9. Kibana Alerting Rules
+### 10. Kibana Alerting Rules
 Ba rule cảnh báo tự động được cấu hình sẵn:
 - **Brute Force Detection** — phát hiện khi >10 request đến `/login.php` trong 1 phút
 - **Directory Scan Detection** — phát hiện khi >15 lần 404 trong 1 phút  
@@ -115,3 +152,4 @@ Fail2Ban (tự động block IP tấn công)
 - ✅ Tự động block IP tấn công (Fail2Ban)
 - ✅ Mật khẩu người dùng được hash (bcrypt)
 - ✅ Admin panel quản trị hệ thống
+- ✅ SSL/TLS HTTPS encryption với OpenSSL
