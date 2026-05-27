@@ -16,11 +16,12 @@ session_start();
   <div class="logo">Shop<span>VN</span></div>
 
   <div class="nav-links">
-    <a href="index.php">Trang chủ</a>
+<a href="index.php">Trang chủ</a>
     <a href="products.php">Sản phẩm</a>
     <a href="search.php">Tìm kiếm</a>
 
     <?php if (isset($_SESSION['user'])): ?>
+      <a href="profile.php">Hồ sơ</a>
       <span class="user-badge">👤 <?= htmlspecialchars($_SESSION['user']) ?></span>
       <?php if ($_SESSION['user'] === 'admin'): ?>
       <a href="admin/">Admin</a>
@@ -73,8 +74,8 @@ session_start();
         Tiếp tục mua sắm
       </a>
 
-      <a href="index.php" class="secondary-link-btn">
-        Về trang chủ
+      <a href="profile.php" class="secondary-link-btn">
+        Xem lịch sử đơn hàng
       </a>
     </div>
 

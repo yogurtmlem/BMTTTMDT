@@ -63,8 +63,9 @@ $productConditions = [
     <a href="index.php">Trang chủ</a>
     <a href="products.php">Sản phẩm</a>
     <a href="search.php">Tìm kiếm</a>
-
+    
     <?php if (isset($_SESSION['user'])): ?>
+      <a href="profile.php">Hồ sơ</a>
       <span class="user-badge">👤 <?= htmlspecialchars($_SESSION['user']) ?></span>
       <?php if ($_SESSION['user'] === 'admin'): ?>
       <a href="admin/">Admin</a>

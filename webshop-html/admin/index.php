@@ -148,6 +148,7 @@ tbody tr:hover td { background: #f8fafc; }
   <nav class="sidebar-nav">
     <div class="nav-section">Menu</div>
     <a href="index.php" class="nav-item active">📊 Dashboard</a>
+    <a href="../orders.php" class="nav-item">📋 Quản lý đơn hàng</a>
     <a href="../index.php" class="nav-item">🏠 Về trang chủ</a>
     <div class="nav-section">Tài khoản</div>
     <a href="../logout.php" class="nav-item">🚪 Đăng xuất</a>
@@ -189,7 +190,7 @@ tbody tr:hover td { background: #f8fafc; }
       <h2>Live Security Monitor — cập nhật mỗi 10 giây</h2>
     </div>
     <iframe
-      src="http://localhost:5601/app/dashboards#/view/a4390058-ff45-43f0-8875-2f45fd8e3b2e?embed=true&_g=(filters:!(),refreshInterval:(pause:!f,value:10000),time:(from:now-1h,to:now))"
+      src="http://localhost:5601/app/dashboards#/view/31271515-e4f9-429c-8c88-c6e7d76db30a?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-15m,to:now))"
       height="600px">
     </iframe>
   </div>

@@ -103,3 +103,49 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Sat May 23 02:16:19.517526 2026] [ssl:warn] [pid 1:tid 1] AH01909: 172.18.0.6:443:0 server certificate does NOT include an ID which matches the server name
 [Sat May 23 02:16:19.523239 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 OpenSSL/3.5.5 configured -- resuming normal operations
 [Sat May 23 02:16:19.525992 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon May 25 14:26:15.313460 2026] [ssl:warn] [pid 1:tid 1] AH01906: 172.18.0.6:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon May 25 14:26:15.315420 2026] [ssl:warn] [pid 1:tid 1] AH01909: 172.18.0.6:443:0 server certificate does NOT include an ID which matches the server name
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Mon May 25 14:26:15.436411 2026] [ssl:warn] [pid 1:tid 1] AH01906: 172.18.0.6:443:0 server certificate is a CA certificate (BasicConstraints: CA == TRUE !?)
+[Mon May 25 14:26:15.437047 2026] [ssl:warn] [pid 1:tid 1] AH01909: 172.18.0.6:443:0 server certificate does NOT include an ID which matches the server name
+[Mon May 25 14:26:15.441994 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 OpenSSL/3.5.5 configured -- resuming normal operations
+[Mon May 25 14:26:15.442444 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon May 25 15:22:50.249529 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.4. Set the 'ServerName' directive globally to suppress this message
+[Mon May 25 15:22:57.694455 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Mon May 25 15:22:57.697537 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon May 25 15:26:30.736051 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Mon May 25 15:26:37.261733 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Mon May 25 15:26:37.262547 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon May 25 15:30:15.821207 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Mon May 25 15:30:21.346272 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Mon May 25 15:30:21.346961 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon May 25 16:21:38.527311 2026] [php:error] [pid 28:tid 28] [client 172.18.0.1:44492] script '/var/www/html/config.php' not found or unable to stat
+[Mon May 25 16:21:38.572248 2026] [php:error] [pid 28:tid 28] [client 172.18.0.1:44492] script '/var/www/html/shell.php' not found or unable to stat
+[Mon May 25 16:23:08.946239 2026] [php:error] [pid 29:tid 29] [client 172.18.0.1:43430] script '/var/www/html/config.php' not found or unable to stat
+[Mon May 25 16:23:08.991127 2026] [php:error] [pid 29:tid 29] [client 172.18.0.1:43430] script '/var/www/html/shell.php' not found or unable to stat
+[Mon May 25 16:23:10.208470 2026] [php:error] [pid 29:tid 29] [client 172.18.0.1:43430] script '/var/www/html/config.php' not found or unable to stat
+[Mon May 25 16:23:10.260719 2026] [php:error] [pid 29:tid 29] [client 172.18.0.1:43430] script '/var/www/html/shell.php' not found or unable to stat
+[Mon May 25 16:23:11.257815 2026] [php:error] [pid 29:tid 29] [client 172.18.0.1:43430] script '/var/www/html/config.php' not found or unable to stat
+[Mon May 25 16:23:11.293129 2026] [php:error] [pid 29:tid 29] [client 172.18.0.1:43430] script '/var/www/html/shell.php' not found or unable to stat
+[Mon May 25 16:23:12.245253 2026] [php:error] [pid 29:tid 29] [client 172.18.0.1:43430] script '/var/www/html/config.php' not found or unable to stat
+[Mon May 25 16:23:12.281967 2026] [php:error] [pid 29:tid 29] [client 172.18.0.1:43430] script '/var/www/html/shell.php' not found or unable to stat
+[Mon May 25 16:59:48.880400 2026] [php:error] [pid 23:tid 23] [client 172.18.0.1:60868] script '/var/www/html/config.php' not found or unable to stat
+[Mon May 25 16:59:48.922902 2026] [php:error] [pid 23:tid 23] [client 172.18.0.1:60868] script '/var/www/html/shell.php' not found or unable to stat
+[Mon May 25 17:07:02.265639 2026] [php:error] [pid 29:tid 29] [client 172.18.0.1:59396] script '/var/www/html/config.php' not found or unable to stat
+[Mon May 25 17:07:02.296178 2026] [php:error] [pid 29:tid 29] [client 172.18.0.1:59396] script '/var/www/html/shell.php' not found or unable to stat
+[Mon May 25 18:59:02.591859 2026] [php:error] [pid 19:tid 19] [client 172.18.0.1:41590] script '/var/www/html/product.php' not found or unable to stat, referer: http://localhost/products.php
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Tue May 26 06:40:05.222531 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Tue May 26 06:40:05.229797 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue May 26 06:40:05.756145 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:34674] DB Error: SQLSTATE[HY000] [2002] Connection refused
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Tue May 26 12:32:48.698421 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Tue May 26 12:32:48.706304 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Wed May 27 05:04:19.638683 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Wed May 27 05:04:19.640313 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed May 27 05:19:23.665814 2026] [php:error] [pid 29:tid 29] [client 172.18.0.1:40648] script '/var/www/html/config.php' not found or unable to stat
+[Wed May 27 05:19:23.712872 2026] [php:error] [pid 29:tid 29] [client 172.18.0.1:40648] script '/var/www/html/shell.php' not found or unable to stat

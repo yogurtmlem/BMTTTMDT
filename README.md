@@ -3,8 +3,6 @@
 Hệ thống giám sát an ninh mạng (mini-SIEM) cho website TMĐT mô phỏng, xây dựng trên ELK Stack + Fail2Ban.
 
 **Môn học:** Bảo mật thông tin trong thương mại điện tử  
-**Nhóm:** [Tên nhóm]  
-**Trường:** [Tên trường]
 
 ---
 
