@@ -149,3 +149,240 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Wed May 27 05:04:19.640313 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
 [Wed May 27 05:19:23.665814 2026] [php:error] [pid 29:tid 29] [client 172.18.0.1:40648] script '/var/www/html/config.php' not found or unable to stat
 [Wed May 27 05:19:23.712872 2026] [php:error] [pid 29:tid 29] [client 172.18.0.1:40648] script '/var/www/html/shell.php' not found or unable to stat
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Thu May 28 16:29:46.258582 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Thu May 28 16:29:46.259525 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu May 28 17:06:54.095371 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Thu May 28 17:06:59.071770 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Thu May 28 17:06:59.072566 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu May 28 17:11:37.293997 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Thu May 28 17:11:45.171357 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Thu May 28 17:11:45.171766 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu May 28 17:11:56.378731 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:56.434421 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:56.481171 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:56.524225 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:56.573887 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:56.623701 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:56.699541 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:56.756285 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:56.803145 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:56.848516 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:56.906360 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:56.969478 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:57.070649 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:57.115823 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:57.161329 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:57.238946 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:57.284986 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:57.420921 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:57.500748 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:57.634986 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:57.751030 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:57.817670 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:57.870884 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:57.930954 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:57.996061 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:58.104248 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:58.233169 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:58.291790 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:58.336156 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:58.428975 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:58.500234 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:58.598080 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:58.699956 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:58.751113 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:58.798509 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:58.855272 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:58.900959 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:58.947878 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:58.991942 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:59.036993 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:59.117578 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:59.156869 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:59.206029 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:59.254116 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:59.334073 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:59.377187 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:59.416393 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:59.461443 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:59.511517 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:11:59.562204 2026] [php:notice] [pid 17:tid 17] [client 172.18.0.1:46956] DB Error: SQLSTATE[HY000] [2002] Connection refused
+[Thu May 28 17:19:13.737699 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Thu May 28 17:19:20.295385 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Thu May 28 17:19:20.297417 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu May 28 17:24:26.951863 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Thu May 28 17:24:32.510782 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Thu May 28 17:24:32.524556 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu May 28 17:34:13.108912 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.6. Set the 'ServerName' directive globally to suppress this message
+[Thu May 28 17:36:22.745940 2026] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.67 (Debian) PHP/8.2.31 configured -- resuming normal operations
+[Thu May 28 17:36:22.746481 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu May 28 17:36:54.211967 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:54.381217 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:54.430778 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:54.481057 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:54.529637 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:54.576815 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:54.630498 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:54.682123 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:54.744969 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:54.812346 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:54.858734 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:54.926270 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:54.975812 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.067635 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.121560 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.170236 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.226150 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.279292 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.327795 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.383578 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.433775 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.481529 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.528515 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.577439 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.632469 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.682728 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.730445 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.778669 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.821419 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.878689 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.942987 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:55.990150 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.044624 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.093128 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.148923 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.196117 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.246208 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.292398 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.342555 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.390930 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.439867 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.489508 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.544456 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.591920 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.644272 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.689904 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.735453 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.790711 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.838329 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:36:56.893977 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:33824] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:13.606195 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:13.652985 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:13.736988 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:13.781614 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:13.825296 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:13.943336 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:13.997319 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:14.282223 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:14.750640 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:14.830323 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:14.879331 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:14.924990 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:14.962061 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.012663 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.072535 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.118892 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.169285 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.224027 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.278477 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.325672 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.428986 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.475068 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.531834 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.597596 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.637045 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.688371 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.746998 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.822443 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.874428 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.926266 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:15.972589 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:16.022809 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:16.081372 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:37:16.152596 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:34706] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 17:39:29.335320 2026] [php:error] [pid 19:tid 19] [client 172.18.0.1:43978] script '/var/www/html/config.php' not found or unable to stat
+[Thu May 28 17:39:29.375723 2026] [php:error] [pid 19:tid 19] [client 172.18.0.1:43978] script '/var/www/html/shell.php' not found or unable to stat
+[Thu May 28 17:46:50.895904 2026] [php:error] [pid 19:tid 19] [client 172.18.0.1:40774] script '/var/www/html/config.php' not found or unable to stat
+[Thu May 28 17:46:50.951884 2026] [php:error] [pid 19:tid 19] [client 172.18.0.1:40774] script '/var/www/html/shell.php' not found or unable to stat
+[Thu May 28 17:47:46.160006 2026] [php:error] [pid 20:tid 20] [client 172.18.0.1:35168] script '/var/www/html/config.php' not found or unable to stat
+[Thu May 28 17:47:46.196194 2026] [php:error] [pid 20:tid 20] [client 172.18.0.1:35168] script '/var/www/html/shell.php' not found or unable to stat
+[Thu May 28 17:47:46.279672 2026] [php:error] [pid 20:tid 20] [client 172.18.0.1:35168] script '/var/www/html/config.php' not found or unable to stat
+[Thu May 28 17:47:46.310224 2026] [php:error] [pid 20:tid 20] [client 172.18.0.1:35168] script '/var/www/html/shell.php' not found or unable to stat
+[Thu May 28 17:47:46.394510 2026] [php:error] [pid 20:tid 20] [client 172.18.0.1:35168] script '/var/www/html/config.php' not found or unable to stat
+[Thu May 28 17:47:46.424558 2026] [php:error] [pid 20:tid 20] [client 172.18.0.1:35168] script '/var/www/html/shell.php' not found or unable to stat
+[Thu May 28 17:49:08.027995 2026] [access_compat:error] [pid 21:tid 21] [client 172.18.0.1:57706] AH01797: client denied by server configuration: /var/www/html/admin
+[Thu May 28 18:09:22.004191 2026] [php:error] [pid 19:tid 19] [client 172.18.0.1:49094] script '/var/www/html/config.php' not found or unable to stat
+[Thu May 28 18:09:22.038709 2026] [php:error] [pid 19:tid 19] [client 172.18.0.1:49094] script '/var/www/html/shell.php' not found or unable to stat
+[Thu May 28 18:13:45.773991 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:45.797820 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:45.843506 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:45.922208 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:45.968838 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.019110 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.063763 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.115438 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.161869 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.217658 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.286106 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.330040 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.378450 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.439058 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.484909 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.558138 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.599544 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.649444 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.699575 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.769015 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.810270 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.856812 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.904057 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:46.975543 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:47.009518 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:47.055387 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:47.104860 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:47.172105 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:47.218985 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:47.263444 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:47.311442 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:47.361724 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:47.411176 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:47.472636 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:13:47.509267 2026] [access_compat:error] [pid 17:tid 17] [client 172.18.0.1:43502] AH01797: client denied by server configuration: /var/www/html/login.php
+[Thu May 28 18:22:32.903225 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/admin
+[Thu May 28 18:22:32.916741 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/wp-admin
+[Thu May 28 18:22:32.927266 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/config.php
+[Thu May 28 18:22:32.941772 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/.env
+[Thu May 28 18:22:32.955353 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/phpmyadmin
+[Thu May 28 18:22:32.969667 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/shell.php
+[Thu May 28 18:22:32.981352 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/backup.sql
+[Thu May 28 18:22:32.993056 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/etc
+[Thu May 28 18:22:33.003863 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/admin
+[Thu May 28 18:22:33.015443 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/wp-admin
+[Thu May 28 18:22:33.025712 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/config.php
+[Thu May 28 18:22:33.034488 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/.env
+[Thu May 28 18:22:33.043086 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/phpmyadmin
+[Thu May 28 18:22:33.052788 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/shell.php
+[Thu May 28 18:22:33.067846 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/backup.sql
+[Thu May 28 18:22:33.076599 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/etc
+[Thu May 28 18:22:33.087184 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/admin
+[Thu May 28 18:22:33.095971 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/wp-admin
+[Thu May 28 18:22:33.105921 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/config.php
+[Thu May 28 18:22:33.114141 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/.env
+[Thu May 28 18:22:33.123778 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/phpmyadmin
+[Thu May 28 18:22:33.134379 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/shell.php
+[Thu May 28 18:22:33.143844 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/backup.sql
+[Thu May 28 18:22:33.152835 2026] [access_compat:error] [pid 18:tid 18] [client 172.18.0.1:58512] AH01797: client denied by server configuration: /var/www/html/etc
+[Thu May 28 18:23:18.379206 2026] [php:error] [pid 19:tid 19] [client 172.18.0.1:49408] script '/var/www/html/config.php' not found or unable to stat
+[Thu May 28 18:23:18.406362 2026] [php:error] [pid 19:tid 19] [client 172.18.0.1:49408] script '/var/www/html/shell.php' not found or unable to stat
+[Thu May 28 18:23:18.473710 2026] [php:error] [pid 19:tid 19] [client 172.18.0.1:49408] script '/var/www/html/config.php' not found or unable to stat
+[Thu May 28 18:23:18.502828 2026] [php:error] [pid 19:tid 19] [client 172.18.0.1:49408] script '/var/www/html/shell.php' not found or unable to stat
+[Thu May 28 18:23:18.597327 2026] [php:error] [pid 19:tid 19] [client 172.18.0.1:49408] script '/var/www/html/config.php' not found or unable to stat
+[Thu May 28 18:23:18.642553 2026] [php:error] [pid 19:tid 19] [client 172.18.0.1:49408] script '/var/www/html/shell.php' not found or unable to stat
+[Thu May 28 18:23:24.189716 2026] [access_compat:error] [pid 20:tid 20] [client 172.18.0.1:49422] AH01797: client denied by server configuration: /var/www/html/
+[Thu May 28 18:23:24.816309 2026] [access_compat:error] [pid 20:tid 20] [client 172.18.0.1:49422] AH01797: client denied by server configuration: /var/www/html/

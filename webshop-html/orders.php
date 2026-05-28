@@ -133,28 +133,41 @@ select.status-select { padding: 4px 8px; border: 1px solid #ddd; border-radius: 
         <?php endif; ?>
         <?php foreach ($orders as $order): ?>
         <tr>
+          <form method="POST">
+        <tr>
           <td>#<?= $order['id'] ?></td>
           <td><?= substr($order['session_id'] ?? '', 0, 10) ?>...</td>
           <td><?= number_format($order['total']) ?>₫</td>
+
           <td>
-            <form method="POST" style="display:flex;align-items:center;gap:4px;">
-              <input type="hidden" name="order_id" value="<?= $order['id'] ?>"/>
-              <select name="status" class="status-select">
-                <?php foreach (['pending','confirmed','packing','shipping','completed','cancelled'] as $s): ?>
-                  <option value="<?= $s ?>" <?= ($order['status'] ?? 'pending') === $s ? 'selected' : '' ?>><?= status_label($s) ?></option>
-                <?php endforeach; ?>
-              </select>
-              <select name="shipping_status" class="status-select">
-                <?php foreach (['processing','packing','shipping','delivered'] as $s): ?>
-                  <option value="<?= $s ?>" <?= ($order['shipping_status'] ?? 'processing') === $s ? 'selected' : '' ?>><?= shipping_label($s) ?></option>
-                <?php endforeach; ?>
-              </select>
-              <button type="submit" class="update-btn">Lưu</button>
-            </form>
+            <input type="hidden" name="order_id" value="<?= $order['id'] ?>"/>
+
+            <select name="status" class="status-select">
+              <?php foreach (['pending','confirmed','packing','shipping','completed','cancelled'] as $s): ?>
+                <option value="<?= $s ?>" <?= ($order['status'] ?? 'pending') === $s ? 'selected' : '' ?>>
+                  <?= status_label($s) ?>
+                </option>
+              <?php endforeach; ?>
+            </select>
           </td>
-          <td><?= shipping_label($order['shipping_status'] ?? 'processing') ?></td>
+
+          <td>
+            <select name="shipping_status" class="status-select">
+              <?php foreach (['processing','packing','shipping','delivered'] as $s): ?>
+                <option value="<?= $s ?>" <?= ($order['shipping_status'] ?? 'processing') === $s ? 'selected' : '' ?>>
+                  <?= shipping_label($s) ?>
+                </option>
+              <?php endforeach; ?>
+            </select>
+          </td>
+
           <td><?= $order['created_at'] ?? '—' ?></td>
-          <td></td>
+
+          <td>
+            <button type="submit" class="update-btn">Lưu</button>
+          </td>
+        </tr>
+        </form>
         </tr>
         <?php endforeach; ?>
       </tbody>

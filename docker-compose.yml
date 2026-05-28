@@ -8,6 +8,7 @@ services:
     volumes:
       - ./webshop-html:/var/www/html
       - ./nginx/logs:/var/log/apache2
+      - ./apache/override.conf:/etc/apache2/conf-enabled/override.conf
     depends_on:
       - mysql
       
@@ -72,6 +73,7 @@ services:
     volumes:
       - ./fail2ban:/data
       - ./nginx/logs:/var/log/apache2:ro
+      - ./webshop-html:/var/www/html
     environment:
       - TZ=Asia/Ho_Chi_Minh
     depends_on:

@@ -190,7 +190,7 @@ tbody tr:hover td { background: #f8fafc; }
       <h2>Live Security Monitor — cập nhật mỗi 10 giây</h2>
     </div>
     <iframe
-      src="http://localhost:5601/app/dashboards#/view/31271515-e4f9-429c-8c88-c6e7d76db30a?_g=(filters:!(),refreshInterval:(pause:!t,value:60000),time:(from:now-15m,to:now))"
+      src="http://localhost:5601/app/dashboards#/view/31271515-e4f9-429c-8c88-c6e7d76db30a?embed=true&_g=(refreshInterval%3A(pause%3A!f%2Cvalue%3A10000)%2Ctime%3A(from%3Anow-1h%2Cto%3Anow))"
       height="600px">
     </iframe>
   </div>
