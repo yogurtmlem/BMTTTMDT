@@ -29,19 +29,19 @@ Lần đầu mất 5–10 phút để tải images. Chờ đến khi tất cả 
 
 ### 3. Cấu hình SSL/TLS (HTTPS)
 
-Chạy lệnh sau để tạo SSL certificate bên trong container:
+Chạy lệnh sau để tạo SSL certificate và cấu hình Apache:
 
+**Bước 1 — Tạo certificate:**
 ```bash
 docker exec -i mini-siem-webshop-1 bash -c "openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/shopvn.key -out /etc/ssl/certs/shopvn.crt -subj '/CN=localhost/O=ShopVN/C=VN'"
 ```
 
-Cấu hình và reload Apache:
-
+**Bước 2 — Cấu hình và reload Apache:**
 ```bash
 docker exec -i mini-siem-webshop-1 bash -c "a2enmod ssl && printf '\n  DocumentRoot /var/www/html\n  SSLEngine on\n  SSLCertificateFile /etc/ssl/certs/shopvn.crt\n  SSLCertificateKeyFile /etc/ssl/private/shopvn.key\n  <Directory /var/www/html>\n    AllowOverride All\n    Require all granted\n  \n\n' > /etc/apache2/sites-available/ssl.conf && a2ensite ssl && service apache2 reload"
 ```
 
-> Certificate không được push lên GitHub. Mỗi collaborator cần tự generate trên máy local.
+> ⚠️ Certificate không được push lên GitHub. Mỗi collaborator cần tự generate trên máy local. SSL config sẽ mất sau mỗi lần `docker compose down` — cần chạy lại hai lệnh trên.
 
 ### 4. Truy cập hệ thống
 
@@ -99,6 +99,23 @@ Sau đó tạo lại data view và import dashboard.
 
 ### 7. Tạo dữ liệu log
 Truy cập các trang shop, đăng nhập, tìm kiếm, thêm sản phẩm vào giỏ, đặt hàng để sinh log tự nhiên.
+
+### 7.1 Chạy SQL migrations (chỉ cần chạy một lần)
+
+Nếu đây là lần đầu chạy hệ thống sau khi clone repo, cần chạy các migration sau:
+
+```powershell
+# Migration 1 — Thêm cột stock vào bảng products
+docker exec -i mini-siem-mysql-1 mysql -ushopuser -pshop123 shopdb < mysql/inventory_migration.sql
+
+# Migration 2 — Thêm cột order history
+docker exec -i mini-siem-mysql-1 mysql -ushopuser -pshop123 shopdb < mysql/order_history_migration.sql
+
+# Migration 3 — Thêm cột shipping_status nếu chưa có
+docker exec -i mini-siem-mysql-1 mysql -ushopuser -pshop123 shopdb -e "ALTER TABLE orders ADD COLUMN IF NOT EXISTS shipping_status VARCHAR(30) NOT NULL DEFAULT 'processing';"
+```
+
+> Nếu gặp lỗi "Duplicate column", có nghĩa là migration đã được chạy rồi — bỏ qua lỗi đó và tiếp tục.
 
 ### 8. Mô phỏng tấn công (PowerShell)
 
